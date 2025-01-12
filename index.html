@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>오늘의 책, 오늘의 문장📚</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; /* 기본 마진을 없애기 */
+            height: 100vh; /* 전체 화면의 높이 설정 */
+            background-color: #000000;
+            color: #ffffff;
+
+            /* Flexbox로 세로, 가로 중앙 정렬을 살짝 위로 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 콘텐츠를 상단으로 배치 */
+            align-items: center; /* 가로 중앙 정렬 */
+            padding-top: 50px; /* 상단 여백을 추가 */
+        }
+
+        h1 {
+            font-size: 28px; /* 원하는 크기로 폰트 크기 변경 */
+            margin-bottom: 20px; /* 타이틀과 다른 요소 간의 간격 */
+        }
+
+        .subtitle {
+            color: #FFFFFF; /* 부제목 색상 - 흰색 */
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-size: 18px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            max-width: 600px;
+            background-color: #f9f9f9;
+            color: #000000;
+        }
+
+        .quote .source {
+            font-size: 13px; /* 본문보다 작은 크기 */
+            color: #000000; /* 검은색 */
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #quote-text {
+            font-size: 16px; /* 원하는 폰트 크기 */
+            color: #000000; /* 원하는 색상 */
+            font-weight: bold; /* 볼드체로 변경 */
+            margin-top: 20px; /* 텍스트를 아래로 내리기 */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>🍀오늘의 책, 오늘의 문장🍀</h1>
+    <div class="subtitle">당신의 하루를 위한 오늘의 책 문장📚</div>
+
+    <div class="quote" id="quote">
+        <div id="quote-text">버튼을 눌러 오늘의 문장을 만나보세요!</div>
+        <div class="source" id="quote-source"></div>
+    </div>
+
+    <button onclick="generateQuote()">오늘의 문장 보기</button>
+
+    <script>
+        const quotes = [
+            { text: "방 정리가 힘든 것은 우주의 이치", source: "<자신의 존재에 대해 사과하지 말 것>, 카밀라 팡" },
+            { text: "당신은 모든 점에서 키치와는 정반대라서 당신을 사랑하는 거야", source: "<참을 수 없는 존재의 가벼움>, 밀란 쿤데라" },
+            { text: "나는 존재하는 것 그러므로 용기란 얼마나 무책임한 것인가, 보라.", source: "<오래된 서적>, 기형도 시" },
+            { text: "도구를 쥔 인간은 도구의 방식으로 말하고 행동한다.", source: "<아무것도 말할 필요가 없다>, 황정은" },
+            { text: "미래는 아무것도 쓰여 있지 않은 것입니다. 그러니 미래는 가장 하얀 것으로 정의할 수 있을지도 모릅니다. <br> 가장 하얗고, 아름답고, 멋있고, 귀한 것이 될 수도 있어요. 용감하고, 다정하고, 똑똑한 아이가 하얀 세상에서 벌인 일처럼요.", source: "<회색에서 왔습니다>, 한요나" }
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+
+            document.getElementById('quote-text').innerHTML = selectedQuote.text;
+            document.getElementById('quote-source').textContent = selectedQuote.source;
+        }
+    </script>
+</body>
+</html>
