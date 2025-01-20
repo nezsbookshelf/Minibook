@@ -118,13 +118,30 @@
             { text: "진정한 도덕적 관심사는 형식적인 것이 아니라 실질적인 것이다. 진정한 도덕적 관심사는 사람들이 좋은 삶을 살고 있는가이지, 어떤 사람들의 삶이 다른 사람들과의 삶과 비교해 어떠한가가 아니다. ", source: "<평등은 없다(On Inequality)>, 해리 G. 프랭크퍼트" }
         ];
 
-        function generateQuote() {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            const selectedQuote = quotes[randomIndex];
+            let usedQuotes = [];  // 이미 출력된 문구를 저장할 배열
 
-            document.getElementById('quote-text').innerHTML = selectedQuote.text;
-            document.getElementById('quote-source').textContent = selectedQuote.source;
-        }
-    </script>
+            function generateQuote() {
+                if (usedQuotes.length === quotes.length) {
+                    // 모든 문구가 다 출력되었을 경우 초기화
+                    usedQuotes = [];
+                    document.getElementById('quote-text').innerHTML = "모든 문구를 보셨습니다. 새로 고침을 해주세요!";
+                    document.getElementById('quote-source').textContent = "";
+                    return;
+                }
+
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * quotes.length);
+                } while (usedQuotes.includes(randomIndex));  // 중복되지 않는 인덱스 찾기
+
+                usedQuotes.push(randomIndex);  // 사용된 인덱스를 배열에 추가
+
+                const selectedQuote = quotes[randomIndex];
+
+                document.getElementById('quote-text').innerHTML = selectedQuote.text;
+                document.getElementById('quote-source').textContent = selectedQuote.source;
+            }
+        </script>
+
 </body>
 </html>
