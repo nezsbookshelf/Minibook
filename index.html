@@ -8,13 +8,13 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:title" content="오늘의 책, 오늘의 문장">
-    <meta property="og:description" content="당신의 하루를 위한 오늘의 책 문장📚">
+    <meta property="og:description" content="당신의 하루를 위한 오늘의 책 문장📖">
 
     <!-- Twitter card meta tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://i.pinimg.com/736x/4b/39/35/4b393591b856399a7dfe7369d687695f.jpg">
     <meta name="twitter:title" content="오늘의 책, 오늘의 문장">
-    <meta name="twitter:description" content="당신의 하루를 위한 책 문장📚">
+    <meta name="twitter:description" content="당신의 하루를 위한 책 문장📖">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap'); /* 서로 다른 폰트 */
 
@@ -26,6 +26,8 @@
             background-color: #fef8e4; /* 따뜻한 톤 배경 */
             color: #333;
             background-image: url('https://i.pinimg.com/736x/61/58/a7/6158a77de09dc9dea00f16d4811ceb4b.jpg'); /* 배경이미지 https://i.pinimg.com/736x/b0/3a/c3/b03ac3f811540fc31bb2c32eb1cafd07.jpg*/
+            /*https://i.pinimg.com/736x/78/98/f2/7898f2f94e0e4d331263bef250cdaf24.jpg*/
+            /*https://i.pinimg.com/736x/61/58/a7/6158a77de09dc9dea00f16d4811ceb4b.jpg*/
             background-repeat: repeat; /* 배경 반복 */
             background-size: cover; /* 화면을 꽉 채움 */
             display: flex;
@@ -133,6 +135,10 @@
                 outline: none;
             }
 
+            /* 🚀 JS로 클릭 후 자동으로 focus 해제 */
+            button.addEventListener("click", function () {
+                this.blur();
+            });
 
 
 
@@ -155,8 +161,8 @@
 
     <script>/*“ ”*/
         const quotes = [
-                        { text: "삶에서 만들어 낼 수 있는 질서의 한계를 인정하면 자유로워진다.<br><br>“방 정리가 힘든 것은 우주의 이치.”", source: "『자신의 존재에 대해 사과하지 말 것』, 카밀라 팡" },
-            { text: "우리의 본성은 사실 붙잡기 어려울 정도로 실체가 없다. 다른 사물들에 비해 악명 높을 정도로 덜 안정적이고 덜 본래적이다. 그리고 사실이 이런한, 진정성 그 자체가 개소리다.", source: "『개소리에 대하여(On Bullshit)』, 해리 G. 프랭크퍼트" },
+            { text: "삶에서 만들어 낼 수 있는 질서의 한계를 인정하면 자유로워진다.<br><br>“방 정리가 힘든 것은 우주의 이치.”", source: "『자신의 존재에 대해 사과하지 말 것』, 카밀라 팡" },
+            { text: "우리의 본성은 사실 붙잡기 어려울 정도로 실체가 없다. 다른 사물들에 비해 악명 높을 정도로 덜 안정적이고 덜 본래적이다. 그리고 사실이 이런한, 진정성 그 자체가 개소리다.", source: "『개소리에 대하여(On Bullshit)』, <br>해리 G. 프랭크퍼트" },
             { text: "하지만 의미는 타인이 아니라 자신이 만들어 가는 것이다. 나는 아무것도 하지 않고 그저 슬퍼하기보다 나아가기를 선택했다. 그러니까 나는 북극성이 되기로 했다. 북극성은 길잡이 별. 비록 가장 밝고 큰 별은 아니어도 누구나 찾을 수 있는 별이니까.", source: "『율의 시선』, 김민서" },
             { text: "나는 당신 삶에 있어 두 번째 사랑이에요. 하지만 어떤 멍청이가 바다를 질투하려 할까요?", source: "『마이그레이션』, 샬롯 맥커너히" },
             { text: "내가 심해에 사는 생물이라면 이런 폭풍우 따위는 아무것도 아닌 그저 위에서 벌어지는 풍경, 아름답게 도색된 세상의 지붕 같은 것일텐데.", source: "『마이그레이션』, 샬롯 맥커너히" },
@@ -176,11 +182,11 @@
             { text: "인생의 의미는 무엇인가? 그게 그 의문의 전부이다. 아주 간단한 의문이다. 해를 거듭함에 따라 점점 우리를 죄어오는 의문이다. 아마도 그에 대한 계시적인 해답은 영원히 안 나타날지도 모른다. 그 대신에, 사소한 일상생활에서의 기적들, 어둠 속에서 성냥불을 그어대듯 작은 조명이 있을 뿐이다. 지금이 그 중의 하나이다. 이것, 저것, 그리고 또 저것. 그녀와 찰스 탠슬리와 부서지는 파도. 그들을 접근시키는 램지 부인. ‘인생이 꼼짝않고 서 있다.’라고 말하는 램지 부인.", source: "『등대로(To the Lighthouse)』, 버지니아 울프" },
             { text: "제임스는 등대를 바라보았다. 그는 흰 페인트 칠을 한 바위와 또렷하고 곧은 탑을 볼 수 있었다, 그 탑신은 흑색과 백색으로 알록달록하게 칠해져 있음을 볼 수 있었다. ...그렇다면 이것이 등대의 정체였을까? 아니다, 예전의 모습도 역시 등대의 정체였다. 왜냐하면 단순하게 한 가지의 형상만 갖춘 것은 이 세상에 없기 때문이었다.", source: "『등대로(To the Lighthouse)』, 버지니아 울프" },
             { text: "그것은 순전히 바위 위에 서 있는 헐벗은 탑이었다. ...예컨대, 늙은 베크위드 부인은 인생이 얼마나 훌륭하고 얼마나 감미로운 것인지 모두들 자랑스럽게 생각하고 기뻐해야 할 것이라고 입버릇처럼 말하지만, 제임스는 지금 바위 위에 서 있는 그 등대를 바라보며, 인생이란 기실 저 등대의 모습과 같을 것이라고 생각하고 있었다. ", source: "『등대로(To the Lighthouse)』, 버지니아 울프" },
-            { text: "자신의 삶이 충분히 좋다고 생각하는 매우 합리적인 사람들이 있다. 그들에게는 자신의 삶이 최대한 좋은 것인지의 여부가 중요하지 않다.", source: "『평등은 없다(On Inequality)』,\n해리 G. 프랭크퍼트" },
-            { text: "진정한 도덕적 관심사는 형식적인 것이 아니라 실질적인 것이다. 진정한 도덕적 관심사는 사람들이 좋은 삶을 살고 있는가이지, 어떤 사람들의 삶이 다른 사람들과의 삶과 비교해 어떠한가가 아니다. ", source: "『평등은 없다(On Inequality)』, \n해리 G. 프랭크퍼트" },
-            { text: "인간의 고통은 기체의 이동과 비슷한 면이 있다. 일정한 양의 기체를 빈 방에 들여보내면 그 방이 아무리 큰 방이라도 기체가 아주 고르게 방 전체를 완전히 채울 것이다. 이와 마찬가지로 인간의 고통도 그 고통이 크든 작든 상관 없이 인간의 영혼과 의식을 완전히 채운다. 따라서 고통의 '크기'는 완전히 상대적인 것이라고 말할 수 있다. <br><br>...수감자들은 차가운 비를 맞으며 밤을 새야 했지만 그들은 아우슈비츠에서 멀리 떨어져 가스실이 없는 다카우의 작은 수용소에 와 있다는 사실 때문에 행복했다.", source: "『빅터 프랭클의 죽음의 수용소에서』, 빅터 프랭클" },
-            { text: "“나는 운명이 나에게 이렇게 엄청난 타격을 가한 것에 감사하고 있어요.” <br><br>“...나무가 이렇게 대답해요. 내가 여기 있단다. 나는 생명이야. 영원한 생명이야.”", source: "『빅터 프랭클의 죽음의 수용소에서』, 빅터 프랭클" },
-            { text: "삶의 의미가 무엇인가에 대한 대답은 포괄적으로 할 수 있는 것이 아니다. '삶'이란 막연한 것이 아니라 현실적이고 구체적인 것이기 때문이다. 삶이 우리에게 던져준 과제가 현실적이고 구체적인 것과 마찬가지로.", source: "『빅터 프랭클의 죽음의 수용소에서』, 빅터 프랭클" },
+            { text: "자신의 삶이 충분히 좋다고 생각하는 매우 합리적인 사람들이 있다. 그들에게는 자신의 삶이 최대한 좋은 것인지의 여부가 중요하지 않다.", source: "『평등은 없다(On Inequality)』,<br>해리 G. 프랭크퍼트" },
+            { text: "진정한 도덕적 관심사는 형식적인 것이 아니라 실질적인 것이다. 진정한 도덕적 관심사는 사람들이 좋은 삶을 살고 있는가이지, 어떤 사람들의 삶이 다른 사람들과의 삶과 비교해 어떠한가가 아니다. ", source: "『평등은 없다(On Inequality)』, <br>해리 G. 프랭크퍼트" },
+            { text: "인간의 고통은 기체의 이동과 비슷한 면이 있다. 일정한 양의 기체를 빈 방에 들여보내면 그 방이 아무리 큰 방이라도 기체가 아주 고르게 방 전체를 완전히 채울 것이다. 이와 마찬가지로 인간의 고통도 그 고통이 크든 작든 상관 없이 인간의 영혼과 의식을 완전히 채운다. 따라서 고통의 '크기'는 완전히 상대적인 것이라고 말할 수 있다. <br><br>...수감자들은 차가운 비를 맞으며 밤을 새야 했지만 그들은 아우슈비츠에서 멀리 떨어져 가스실이 없는 다카우의 작은 수용소에 와 있다는 사실 때문에 행복했다.", source: "『빅터 프랭클의 죽음의 수용소에서』, <br>빅터 프랭클" },
+            { text: "“나는 운명이 나에게 이렇게 엄청난 타격을 가한 것에 감사하고 있어요.” <br><br>“...나무가 이렇게 대답해요. 내가 여기 있단다. 나는 생명이야. 영원한 생명이야.”", source: "『빅터 프랭클의 죽음의 수용소에서』, <br>빅터 프랭클" },
+            { text: "삶의 의미가 무엇인가에 대한 대답은 포괄적으로 할 수 있는 것이 아니다. '삶'이란 막연한 것이 아니라 현실적이고 구체적인 것이기 때문이다. 삶이 우리에게 던져준 과제가 현실적이고 구체적인 것과 마찬가지로.", source: "『빅터 프랭클의 죽음의 수용소에서』, <br>빅터 프랭클" },
             { text: " 사람들이 착각하는 게 있다. 유년이 시절이라는 것. 유년은 시절(時節)이 아니다. 어느 곳에 멈추거나 끝나지 않는다. 돌아온다. 지나갔다고 생각하는 순간, 다 컸다고 착각하는 틈을 비집고 돌아와 현재를 헤집어 놓는다. 사랑에, 이별에, 지속되는 모든 생활에, 지리멸렬과 환멸로 치환되는 그 모든 숨에 유년이 박혀있다. 붉음과 빛남을 흉내낸 인조 보석처럼. 박혀 있다. 어른의 행동? 그건 유년의 그림자, 유년의 오장육부에 지나지 않는다.<br><br> 그 시절의 루비를 만난다면 물어보고 싶다. <br> 루비, 깨끗해져야 하는 게 정말 우리였을까?", source: "『여름과 루비』, 박연준" },
             { text: "“얼음 장수가 얼음을 싣고 땀을 뻘뻘 흘리며 끌고 갔다. 덥고 더운 여름 얘기.<br>나무 장수가 나무를 싣고 손을 호호 불며 끌고 갔다. 춥고 추운 겨울 얘기.”", source: "『여름과 루비』, 박연준" },
             { text: "과거를 생각하면 슬프고, 현재를 떠올리면 입을 다물고 싶고, 미래를 생각하면 씩씩해져야 할 것 같다. 모든 것에 이야기가 담겨 있다.", source: "『여름과 루비』, 박연준 " },
@@ -199,39 +205,54 @@
             { text: "한때 나일에게 우리가 죽으면 어떻게 될지 물어본 적이 있다. 그는 오직 부패와 소멸만이 있을 것이라고 말했다. 나는 또 그렇다면 우리 삶에 있어서 죽음은 어떤 의미가 있는지 물었다. 그러자 그는 삶은 우리에게 아무런 의미가 없으며 그저 재생의 순환일 뿐이라면서, 우리는 여느 동물과 마찬가지로 불가해할 정도로 짧은 삶을 사는데, 그것이 인간이라고 해서 어떠한 생명체의 삶보다 더 중요한 가치가 있는 것은 아니며, 자만심과 어떻게든 의미를 찾으려고 애쓰는 바람에 우리는 오히려 우리에게 삶을 제공해주는 이 행성을 함께 공유하는 법을 잊어버리는 것이라고 했다. 그날 밤 나는 그에게 편지를 썼다.<br><br><em>당신 말이 맞을 거예요. 그렇다고 삶에 아무런 의미가 없는 건 아니에요. 우리 자신을 위해, 그리고 우리 주변에 있는 사람들을 위해 살아가다 보면, 어느 순간 삶은 더 달콤해지면서 비로소 그 의미가 생기게 되는 건지도 몰라요.</em>", source: "『마이그레이션』, 샬롯 맥커너히" },
            // { text: "", source: "『』, " },
             
+            
 
             
         ];
 
-        let usedQuotes = [];
+            let usedQuotes = [];
+            let lastSource = null;  // 마지막 문장의 책 제목 저장
 
-        function generateQuote() {
-            const divider = document.getElementById('divider');
-            if (usedQuotes.length === quotes.length) {
-                usedQuotes = [];
-                document.getElementById('quote-text').innerHTML = "모든 문구를 보셨습니다. 새로 고침을 해주세요!";
-                document.getElementById('quote-source').textContent = "";
-                document.getElementById('second-quote-source').textContent = "";  // 두 번째 출처 초기화
-                divider.style.display = 'none'; // 안내 박스에서 작대기 숨김
-                return;
-            }
+            function generateQuote() {
+                const divider = document.getElementById('divider');
 
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * quotes.length);
-            } while (usedQuotes.includes(randomIndex));
+                // 모든 문장을 다 봤을 경우
+                if (usedQuotes.length === quotes.length) {
+                    usedQuotes = [];
+                    lastSource = null; // 마지막 출처도 초기화
+                    document.getElementById('quote-text').innerHTML = "모든 문구를 보셨습니다. 새로 고침을 해주세요!";
+                    document.getElementById('quote-source').textContent = "";
+                    document.getElementById('second-quote-source').textContent = "";
+                    divider.style.display = 'none';
+                    return;
+                }
 
-            usedQuotes.push(randomIndex);
+                let randomIndex;
+                let selectedQuote;
+                let safetyCounter = 0; // 무한 루프 방지
 
-            const selectedQuote = quotes[randomIndex];
+                do {
+                    randomIndex = Math.floor(Math.random() * quotes.length);
+                    selectedQuote = quotes[randomIndex];
+                    safetyCounter++;
 
-            document.getElementById('quote-text').innerHTML = selectedQuote.text;
-            document.getElementById('quote-source').textContent = selectedQuote.source;
-            document.getElementById('second-quote-source').textContent = selectedQuote.secondSource; // 두 번째 출처 표시
-            divider.style.display = 'block'; // 작대기 표시
+                    // 100번 반복해도 조건 만족 못하면 루프 종료
+                    if (safetyCounter > 100) break;
+                } while (
+                    usedQuotes.includes(randomIndex) || 
+                    selectedQuote.source === lastSource
+                );
 
-    }       
+                usedQuotes.push(randomIndex);
+                lastSource = selectedQuote.source; // 마지막 출처 저장
+
+                document.getElementById('quote-text').innerHTML = selectedQuote.text;
+                document.getElementById('quote-source').textContent = selectedQuote.source;
+                document.getElementById('quote-source').innerHTML = selectedQuote.source;
+                divider.style.display = 'block';
+            
+
+        }
     </script>
 </body>
 </html>
-       
