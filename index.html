@@ -18,23 +18,36 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap'); /* 서로 다른 폰트 */
 
+		@media (max-width: 768px) {
         body {
-            font-family: 'Noto Serif KR', serif; /* 타이틀과 서브타이틀에 사용할 폰트 */
+            font-family: 'Noto Serif KR', serif;
+            /* 타이틀과 서브타이틀에 사용할 폰트 */
             text-align: center;
             margin: 0;
-            height: 100vh;
-            background-color: #fef8e4; /* 따뜻한 톤 배경 */
+            /*height: 100vh;*/
+            min-height: 75vh;
+            background-color: #fef8e4;
+            /* 따뜻한 톤 배경 */
             color: #333;
-            background-image: url('https://i.pinimg.com/736x/61/58/a7/6158a77de09dc9dea00f16d4811ceb4b.jpg'); /* 배경이미지 https://i.pinimg.com/736x/b0/3a/c3/b03ac3f811540fc31bb2c32eb1cafd07.jpg*/
-            /*https://i.pinimg.com/736x/78/98/f2/7898f2f94e0e4d331263bef250cdaf24.jpg*/
+            background-image: url('https://github.com/nezsbookshelf/background-images/raw/main/IMG_6438.jpeg');;
+            /* 배경이미지 https://i.pinimg.com/736x/b0/3a/c3/b03ac3f811540fc31bb2c32eb1cafd07.jpg*/
             /*https://i.pinimg.com/736x/61/58/a7/6158a77de09dc9dea00f16d4811ceb4b.jpg*/
-            background-repeat: repeat; /* 배경 반복 */
-            background-size: cover; /* 화면을 꽉 채움 */
+            /*https://i.pinimg.com/736x/78/98/f2/7898f2f94e0e4d331263bef250cdaf24.jpg*/
+            /*https://i.pinimg.com/736x/1a/ff/62/1aff6265679aa05064609d404d1ae086.jpg*/
+            /*background-repeat: repeat;*/
+            /* 배경 반복 */
+            background-size: cover;
+            /* 화면을 꽉 채움 */
+            background-position: center bottom;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding-top: 75px; /* 전체 요소 아래로 이동 */
+            padding-top: 75px;
+            padding-bottom: 200px;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            }
         }
 
         h1 {
